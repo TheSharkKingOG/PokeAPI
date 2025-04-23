@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokémon Explorer</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search Pokémon...">
+                <button id="searchButton">Search</button>
+            </div>
+            <div class="battle-controls">
+                <button id="startBattleBtn">Start Battle</button>
+                <button id="selectPokemonBtn" disabled>Select Pokémon</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="pokemon-grid" id="pokemonGrid">
+                <!-- Pokémon cards will be dynamically added here -->
+            </div>
+
+            <div class="pokemon-details" id="pokemonDetails">
+                <div class="details-content">
+                    <button class="close-button" id="closeDetails">&times;</button>
+                    <div class="pokemon-info">
+                        <div class="pokemon-image">
+                            <img id="pokemonSprite" src="" alt="Pokémon sprite">
+                        </div>
+                        <div class="pokemon-stats">
+                            <h2 id="pokemonName"></h2>
+                            <div class="types" id="pokemonTypes"></div>
+                            <div class="stats-container">
+                                <h3>Base Stats</h3>
+                                <div id="pokemonStats"></div>
+                            </div>
+                            <div class="abilities">
+                                <h3>Abilities</h3>
+                                <div id="pokemonAbilities"></div>
+                            </div>
+                            <div class="battle-actions">
+                                <button id="selectForBattle" class="hidden">Select for Battle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Battle Arena -->
+            <div class="battle-arena" id="battleArena">
+                <div class="battle-background">
+                    <div class="battle-scene">
+                        <div class="battle-field">
+                            <div class="opponent-pokemon">
+                                <div class="pokemon-info">
+                                    <h3 id="opponentPokemonName"></h3>
+                                    <div class="pokemon-health">
+                                        <div class="health-bar">
+                                            <div id="opponentHealthBar" class="health-fill"></div>
+                                        </div>
+                                        <span id="opponentHealthText">100/100</span>
+                                    </div>
+                                </div>
+                                <div class="pokemon-sprite">
+                                    <img id="opponentPokemonSprite" src="" alt="Opponent Pokémon">
+                                </div>
+                            </div>
+                            
+                            <div class="battle-message" id="battleMessage">Battle started!</div>
+                            
+                            <div class="player-pokemon">
+                                <div class="pokemon-sprite">
+                                    <img id="playerPokemonSprite" src="" alt="Player Pokémon">
+                                </div>
+                                <div class="pokemon-info">
+                                    <h3 id="playerPokemonName"></h3>
+                                    <div class="pokemon-health">
+                                        <div class="health-bar">
+                                            <div id="playerHealthBar" class="health-fill"></div>
+                                        </div>
+                                        <span id="playerHealthText">100/100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="battle-menu">
+                            <div class="battle-options">
+                                <button id="fightButton" class="battle-option">FIGHT</button>
+                                <button id="runButton" class="battle-option">RUN</button>
+                            </div>
+                            
+                            <div class="move-selection hidden" id="moveSelection">
+                                <h3>Moves</h3>
+                                <div id="moveButtons" class="move-buttons">
+                                    <!-- Move buttons will be added here -->
+                                </div>
+                                <button id="backButton" class="battle-option">BACK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-button" id="closeBattle">&times;</button>
+            </div>
+        </main>
+
+        <div class="loading" id="loading">
+            <div class="pokeball"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

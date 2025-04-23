@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Battle</title>
+    <link rel="stylesheet" href="battle-styles.css">
+</head>
+<body>
+    <div class="battle-container">
+        <div class="battle-scene">
+            <div class="wild-pokemon">
+                <img id="wildPokemonImage" src="" alt="Wild Pokémon">
+                <h2 id="wildPokemonName"></h2>
+            </div>
+            
+            <div class="catch-mechanics">
+                <div class="catch-bar-container">
+                    <div class="catch-bar"></div>
+                </div>
+                <div class="pokeball"></div>
+            </div>
+            
+            <div class="battle-controls">
+                <button id="throwButton" class="battle-button">Throw Pokéball</button>
+                <button id="runButton" class="battle-button">Run</button>
+                <button id="returnButton" class="battle-button">Return to Collection</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <p id="resultMessage"></p>
+            <button id="closeButton" class="battle-button">Continue</button>
+        </div>
+    </div>
+
+    <script src="battle.js"></script>
+</body>
+</html> 
